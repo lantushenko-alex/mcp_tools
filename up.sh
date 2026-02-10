@@ -1,1 +1,1 @@
-docker-compose up -d
+docker model pull ai/qwen3:0.6B-Q4_0

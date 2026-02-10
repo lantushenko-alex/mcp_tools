@@ -1,3 +1,4 @@
+#ollama is unable to use Mac GPU therefore it's better not to use it
 services:
   ollama:
     image: ollama/ollama

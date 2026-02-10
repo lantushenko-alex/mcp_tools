@@ -6,10 +6,10 @@ import asyncio
 from tools.mcp_server_time import time_server
 
 provider = OpenAIProvider(
-    base_url="http://localhost:11434/v1",
+    base_url="http://localhost:12434/engines/v1",
 )
 
-agent_model = OpenAIChatModel("qwen3:4b", provider=provider)
+agent_model = OpenAIChatModel("ai/qwen3:0.6B-Q4_0", provider=provider)
 
 agent = Agent(
     model=agent_model,
@@ -25,7 +25,7 @@ async def run_async(prompt: str) -> str:
 
 def main():
     print("Running LLM query")
-    output = asyncio.run(run_async("What's the date today?"))
+    output = asyncio.run(run_async("What is the current time in America/New_York?"))
     print(output)
 
 

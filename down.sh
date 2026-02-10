@@ -1,0 +1,1 @@
+docker model rm ai/qwen3:0.6B-Q4_0
